@@ -27,10 +27,10 @@ function HeroSection() {
   return (
     <header className="flex flex-col items-center justify-center px-6 pt-32 pb-24 text-center">
       <p className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground mb-6">
-        Ready Code Go
+        Software Consulting
       </p>
       <h1 className="text-5xl md:text-7xl leading-tight max-w-3xl">
-        What we do
+        Ready Code Go
       </h1>
     </header>
   );
@@ -71,10 +71,13 @@ function ValueSection() {
 
   return (
     <section className="max-w-4xl mx-auto px-6 py-20">
-      <div className="grid gap-16">
+      <div className="border-t border-border pt-8">
+        <h2 className="text-4xl md:text-5xl mb-12">What we do</h2>
+        <div className="grid gap-16">
         {values.map((v) => (
           <ValueCard key={v.title} title={v.title} description={v.description} sub={v.sub} />
         ))}
+        </div>
       </div>
     </section>
   );
