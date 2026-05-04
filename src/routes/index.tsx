@@ -139,6 +139,7 @@ function Footer() {
   return (
     <footer className="max-w-4xl mx-auto px-6 py-16 border-t border-border">
       <div className="flex flex-col items-center gap-6">
+        <img src={johanProfile} alt="Johan Teleman" className="h-20 w-20 rounded-full object-cover" />
         <div className="flex items-center gap-4">
           <a
             href="https://www.linkedin.com/in/johan-teleman-7341263b"
