@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Software Consulting — Deep Technical Expertise" },
+      { title: "Ready Code Go — Software Consulting" },
       { name: "description", content: "1-man software consulting. Deep expertise in parallel execution, distribution, compilers and persistence. Value delivered as committed code." },
     ],
   }),
@@ -27,22 +27,27 @@ function HeroSection() {
   return (
     <header className="flex flex-col items-center justify-center px-6 pt-32 pb-24 text-center">
       <p className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground mb-6">
-        Software Consulting
+        Ready Code Go
       </p>
       <h1 className="text-5xl md:text-7xl leading-tight max-w-3xl">
-        What value do I offer?
+        What we do
       </h1>
     </header>
   );
 }
 
-function ValueCard({ title, description }: { title: string; description: string }) {
+function ValueCard({ title, description, sub }: { title: string; description: string; sub?: string }) {
   return (
     <div className="border-t border-border pt-8">
       <h3 className="text-2xl md:text-3xl mb-4">{title}</h3>
       <p className="text-muted-foreground text-lg leading-relaxed max-w-lg font-light">
         {description}
       </p>
+      {sub && (
+        <p className="text-muted-foreground/70 text-base leading-relaxed max-w-lg font-light mt-3 pl-4 border-l-2 border-accent">
+          {sub}
+        </p>
+      )}
     </div>
   );
 }
@@ -56,10 +61,7 @@ function ValueSection() {
     {
       title: "Increase progress on hard technical problems",
       description: "I bring lots of experience in solving issues around hard software problems like parallel execution, distribution, compilers and persistence.",
-    },
-    {
-      title: "Value is captured as committed code",
-      description: "",
+      sub: "Value is captured as committed code.",
     },
     {
       title: "Future-proof architecture and technical direction",
@@ -71,7 +73,7 @@ function ValueSection() {
     <section className="max-w-4xl mx-auto px-6 py-20">
       <div className="grid gap-16">
         {values.map((v) => (
-          <ValueCard key={v.title} title={v.title} description={v.description} />
+          <ValueCard key={v.title} title={v.title} description={v.description} sub={v.sub} />
         ))}
       </div>
     </section>
