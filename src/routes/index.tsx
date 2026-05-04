@@ -77,6 +77,7 @@ function ValueSection() {
         {values.map((v) => (
           <ValueCard key={v.title} title={v.title} description={v.description} sub={v.sub} />
         ))}
+        </div>
       </div>
     </section>
   );
