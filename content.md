@@ -6,19 +6,19 @@ Some problems are just genuinely hard — the kind where the usual playbook runs
 
 ## The Offer
 
-### Reduce time and cost of internal processes
+### Remove the bottlenecks slowing your team down
 
-Build custom optimized tools to open up bottlenecks in your processes.
+There's always a manual step, a brittle workaround, or a process that works — but slowly. I build custom internal tools that make the friction disappear.
 
-### Increase progress on hard technical problems
+### Crack the problems your team has been circling
 
-Strenghen your team with experience from solving very hard software problems like parallel execution, distribution, compilers and persistence.
+Some challenges need someone who's been deep in parallel execution, distributed systems, compilers, and data persistence — not just read about them. I bring that experience directly to your problem.
 
 > Value is captured as committed code.
 
-### Future-proof architecture and technical direction
+### Technical direction that holds up
 
-Align technical direction with business requirements. Johan adds broad knowledge across all engineering disciplines and a deep first-principles understanding of software, to help find a good balance of short term value and long term durability.
+The decisions you make today about architecture will compound — for better or worse. I bring first-principles thinking across all engineering disciplines to help you find the balance between shipping now and staying solid long-term.
 
 ## Key traits
 
