@@ -37,6 +37,23 @@ Align technical direction with business requirements. Johan adds broad knowledge
 
 > You are one of the smartest and nicest people I have ever worked with and I hope to do it again sometime!
 
+## Tech & Skills
+
+- Claude Code
+- Claude Skills
+- Agent tuning
+- Kotlin
+- Scala
+- JVM
+- Python
+- GraphQL
+- Cypher
+- Neo4j
+- SQL
+- Kanban
+- Coaching leadership
+- Teaching
+
 ## Contact
 
 [Johan Teleman](https://www.linkedin.com/in/johan-teleman-7341263b)

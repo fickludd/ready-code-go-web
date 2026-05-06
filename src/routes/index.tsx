@@ -13,6 +13,7 @@ function Index() {
       <ValueSection />
       <WhyMeSection />
       <TestimonialsSection />
+      <SkillsSection />
       <Footer />
     </div>
   );
@@ -97,6 +98,26 @@ function TestimonialsSection() {
                 "{t}"
               </p>
             </blockquote>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SkillsSection() {
+  return (
+    <section className="max-w-4xl mx-auto px-6 py-20">
+      <div className="border-t border-border pt-8">
+        <h2 className="text-4xl md:text-5xl mb-12">{content.skills.heading}</h2>
+        <div className="flex flex-wrap gap-3">
+          {content.skills.items.map((skill) => (
+            <span
+              key={skill}
+              className="px-4 py-2 rounded-full border border-border text-sm font-medium text-muted-foreground"
+            >
+              {skill}
+            </span>
           ))}
         </div>
       </div>

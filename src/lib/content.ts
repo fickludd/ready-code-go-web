@@ -21,6 +21,7 @@ export interface SiteContent {
   values: { heading: string; items: Value[] };
   whyMe: { heading: string; items: string[] };
   testimonials: { heading: string; items: string[] };
+  skills: { heading: string; items: string[] };
   contact: Contact & { heading: string };
 }
 
@@ -92,7 +93,7 @@ function parse(): SiteContent {
   const parts = raw.split(/^## /m);
   const heroPart = parts[0];
   const sections = parseSections(raw);
-  const [valuesSection, whyMeSection, testimonialsSection, contactSection] = sections;
+  const [valuesSection, whyMeSection, testimonialsSection, skillsSection, contactSection] = sections;
 
   return {
     hero: parseHero(heroPart),
@@ -107,6 +108,10 @@ function parse(): SiteContent {
     testimonials: {
       heading: testimonialsSection?.heading ?? "",
       items: parseBlockquotes(testimonialsSection?.body ?? ""),
+    },
+    skills: {
+      heading: skillsSection?.heading ?? "",
+      items: parseList(skillsSection?.body ?? ""),
     },
     contact: {
       heading: contactSection?.heading ?? "",
