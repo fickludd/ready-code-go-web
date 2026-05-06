@@ -22,8 +22,8 @@ Align technical direction with business requirements. Johan adds broad knowledge
 
 ## Key traits
 
-- Deep technical expertise from solving the hardest software problems
-- Highly anchored in end-users, business value and ROI
+- Deep technical expertise built across PhD-level research and product engineering at Neo4j
+- Grounded in business value and ROI — I've been a founder, not just a consultant
 - High speed output using agent-assisted processes as default
 - Good at explaining hard problems simply
 

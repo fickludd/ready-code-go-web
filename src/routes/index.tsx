@@ -23,6 +23,7 @@ function Index() {
 function HeroSection() {
   return (
     <header className="flex flex-col items-center justify-center px-6 pt-32 pb-24 text-center">
+      <img src={johanProfile} alt="Johan Teleman" className="h-28 w-28 rounded-full object-cover mb-10" />
       <p className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground mb-6">
         {content.hero.subtitle}
       </p>
