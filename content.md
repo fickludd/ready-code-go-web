@@ -40,5 +40,7 @@ Align technical direction with business requirements. Johan adds broad knowledge
 ## Contact
 
 [Johan Teleman](https://www.linkedin.com/in/johan-teleman-7341263b)
+[GitHub](https://github.com/fickludd/)
+[Google Scholar](https://scholar.google.com/citations?user=C1z7RkcAAAAJ&hl=en)
 
 Want to work together? You'll find me where first and last name meet *at gmail*.

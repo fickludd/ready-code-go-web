@@ -6,9 +6,13 @@ export interface Value {
   sub?: string;
 }
 
+export interface ContactLink {
+  name: string;
+  url: string;
+}
+
 export interface Contact {
-  linkedinName: string;
-  linkedinUrl: string;
+  links: ContactLink[];
   note: string;
 }
 
@@ -70,17 +74,18 @@ function parseBlockquotes(text: string): string[] {
 }
 
 function parseContact(text: string): Contact {
-  const linkMatch = text.match(/\[([^\]]+)\]\(([^)]+)\)/);
+  const links: ContactLink[] = [];
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let match;
+  while ((match = linkRegex.exec(text)) !== null) {
+    links.push({ name: match[1], url: match[2] });
+  }
   const note = text
     .split("\n")
     .filter((l) => l.trim() && !/^\[.+\]\(.+\)/.test(l.trim()))
     .join(" ")
     .trim();
-  return {
-    linkedinName: linkMatch?.[1] ?? "",
-    linkedinUrl: linkMatch?.[2] ?? "",
-    note,
-  };
+  return { links, note };
 }
 
 function parse(): SiteContent {
