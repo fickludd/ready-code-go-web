@@ -22,6 +22,7 @@ export interface SiteContent {
   whyMe: { heading: string; items: string[] };
   testimonials: { heading: string; items: string[] };
   skills: { heading: string; items: string[] };
+  cta: { heading: string; body: string; link: ContactLink };
   contact: Contact & { heading: string };
 }
 
@@ -74,6 +75,13 @@ function parseBlockquotes(text: string): string[] {
     .map((l) => l.trim().slice(2).trim());
 }
 
+function parseCTA(text: string): { body: string; link: ContactLink } {
+  const linkMatch = text.match(/\[([^\]]+)\]\(([^)]+)\)/);
+  const link = linkMatch ? { name: linkMatch[1], url: linkMatch[2] } : { name: "", url: "" };
+  const body = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "").trim();
+  return { body, link };
+}
+
 function parseContact(text: string): Contact {
   const links: ContactLink[] = [];
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -93,7 +101,7 @@ function parse(): SiteContent {
   const parts = raw.split(/^## /m);
   const heroPart = parts[0];
   const sections = parseSections(raw);
-  const [valuesSection, whyMeSection, testimonialsSection, skillsSection, contactSection] = sections;
+  const [valuesSection, whyMeSection, testimonialsSection, skillsSection, ctaSection, contactSection] = sections;
 
   return {
     hero: parseHero(heroPart),
@@ -112,6 +120,10 @@ function parse(): SiteContent {
     skills: {
       heading: skillsSection?.heading ?? "",
       items: parseList(skillsSection?.body ?? ""),
+    },
+    cta: {
+      heading: ctaSection?.heading ?? "",
+      ...parseCTA(ctaSection?.body ?? ""),
     },
     contact: {
       heading: contactSection?.heading ?? "",

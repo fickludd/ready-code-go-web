@@ -1,8 +1,8 @@
 # Ready Code Go
 
-Software Consulting
+Senior software engineering, on demand
 
-Through Ready Code Go Johan Teleman offers software expertice, both as an individual contributor and at a strategic and leadership level. 
+Some problems are just genuinely hard — the kind where the usual playbook runs out. A system hitting its limits, an architecture at a crossroads, a technical bet that has to land. I come in, dig deep, and ship.
 
 ## The Offer
 
@@ -53,6 +53,12 @@ Align technical direction with business requirements. Johan adds broad knowledge
 - Kanban
 - Coaching leadership
 - Teaching
+
+## Let's talk
+
+If this sounds like what you need, I'd love to hear about it.
+
+[Message me on LinkedIn](https://www.linkedin.com/in/johan-teleman-7341263b)
 
 ## Contact
 

@@ -14,6 +14,7 @@ function Index() {
       <WhyMeSection />
       <TestimonialsSection />
       <SkillsSection />
+      <CTASection />
       <Footer />
     </div>
   );
@@ -120,6 +121,28 @@ function SkillsSection() {
             </span>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function CTASection() {
+  return (
+    <section className="max-w-4xl mx-auto px-6 py-20">
+      <div className="border-t border-border pt-8 flex flex-col items-center text-center gap-6">
+        <h2 className="text-4xl md:text-5xl">{content.cta.heading}</h2>
+        <p className="text-lg font-light text-muted-foreground max-w-lg leading-relaxed">
+          {content.cta.body}
+        </p>
+        <a
+          href={content.cta.link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full text-sm font-medium hover:opacity-80 transition-opacity"
+        >
+          <LinkIcon url={content.cta.link.url} />
+          {content.cta.link.name}
+        </a>
       </div>
     </section>
   );
